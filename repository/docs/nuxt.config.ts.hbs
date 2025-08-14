@@ -1,0 +1,32 @@
+import { fileURLToPath } from 'node:url'
+
+export default defineNuxtConfig({
+  modules: [
+    '@weme-ui/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/content',
+  ],
+
+  alias: {
+    '@registry': fileURLToPath(new URL('../registry', import.meta.url)),
+  },
+
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        'reka-ui',
+        'clsx',
+        'tailwind-merge',
+        'tailwind-variants',
+      ],
+    },
+  },
+
+  devtools: {
+    enabled: true,
+  },
+
+  compatibilityDate: '{{ date }}',
+})

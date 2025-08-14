@@ -1,0 +1,30 @@
+{
+  "$schema": "../../schema/registry.json",
+  "name": "@{{ owner }}/{{ name }}",
+  "description": "Weme UI for {{ titleCase name }} components registry.",
+  "version": "{{ version }}",
+  "prefix": "{{ name }}",
+  "access": "public",
+  "meta": {
+    "authors": [
+      "{{{ author }}}"
+    ],
+    "homepage": "https://github.com/{{ owner }}/{{ name }}",
+    "repository": "https://github.com/{{ owner }}/{{ name }}.git",
+    "bugs": "https://github.com/{{ owner }}/{{ name }}/issues",
+    "tags": [
+      "@{{ owner }}/{{ name }}"
+    ]
+  },
+  "dependencies": [
+    "clsx",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "devDependencies": [
+    "@weme-ui/nuxt",
+    "@weme-ui/unocss-preset"
+  ],
+  "items": [
+  ]
+}

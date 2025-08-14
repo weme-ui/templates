@@ -1,0 +1,16 @@
+{
+  "name": "@weme-ui/templates",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Allen Luo <luoyi@mouji.net>",
+  "license": "MIT",
+  "homepage": "https://github.com/weme-ui/weme-ui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weme-ui/weme-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/weme-ui/weme-ui/issues"
+  }
+}

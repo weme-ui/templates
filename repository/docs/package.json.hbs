@@ -1,0 +1,45 @@
+{
+  "name": "docs",
+  "type": "module",
+  "version": "{{ version }}",
+  "packageManager": "{{ packageManager }}",
+  "description": "The documentation for Weme UI {{ titleCase name }}.",
+  "author": "{{{ author }}}",
+  "license": "{{ license }}",
+  "homepage": "https://github.com/{{ owner }}/{{ name }}",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/{{ owner }}/{{ name }}.git",
+    "directory": "docs"
+  },
+  "bugs": {
+    "url": "https://github.com/{{ owner }}/{{ name }}/issues"
+  },
+  "keywords": [
+    "weme-ui",
+    "weme-ui-components"
+  ],
+  "scripts": {
+    "dev": "nuxi dev",
+    "dev:prepare": "nuxi prepare",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
+  },
+  "dependencies": {
+    "@nuxt/content": "catalog:docs",
+    "@nuxtjs/i18n": "catalog:docs"
+  },
+  "devDependencies": {
+    "@vueuse/core": "catalog:dev",
+    "@vueuse/nuxt": "catalog:dev",
+    "@weme-ui/nuxt": "workspace:*",
+    "@weme-ui/unocss-preset": "workspace:*",
+    "better-sqlite3": "catalog:docs",
+    "defu": "catalog:dev",
+    "nuxt": "catalog:nuxt",
+    "reka-ui": "catalog:dev",
+    "typescript": "catalog:build",
+    "vue": "catalog:vue"
+  }
+}

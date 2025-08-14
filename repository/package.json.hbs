@@ -1,0 +1,62 @@
+{
+  "name": "{{ name }}",
+  "type": "module",
+  "version": "{{ version }}",
+  "private": true,
+  "packageManager": "{{ packageManager }}",
+  "author": "{{ author }}",
+  "license": "{{ license }}",
+  "homepage": "https://github.com/{{ owner }}/{{ name }}",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/{{ owner }}/{{ name }}.git"
+  },
+  "bugs": {
+    "url": "https://github.com/{{ owner }}/{{ name }}/issues"
+  },
+  "engines": {
+    "node": ">=22.14.0",
+    "pnpm": ">=10.13.0"
+  },
+  "scripts": {
+    "build": "pnpm -C packages/cli build",
+    "dev": "pnpm -C docs dev",
+    "dev:prepare": "pnpm -r dev:prepare",
+    "lint": "eslint .",
+    "test": "vitest",
+    "typecheck": "pnpm -r typecheck",
+    "release": "bumpp -r --excute=\"pnpm i\"",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "taze": "taze major -I -r",
+    "commit": "czg"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:lint",
+    "@commitlint/cli": "catalog:build",
+    "@commitlint/config-conventional": "catalog:build",
+    "@typescript/native-preview": "catalog:build",
+    "bumpp": "catalog:build",
+    "commitizen": "catalog:build",
+    "conventional-changelog": "catalog:build",
+    "cz-git": "catalog:build",
+    "czg": "catalog:build",
+    "eslint": "catalog:lint",
+    "eslint-plugin-pnpm": "catalog:lint",
+    "jsonc-eslint-parser": "catalog:lint",
+    "lint-staged": "catalog:lint",
+    "simple-git-hooks": "catalog:build",
+    "taze": "catalog:build",
+    "yaml-eslint-parser": "catalog:lint"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{vue,ts,tsx,mjs,cjs,jsx}": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}
