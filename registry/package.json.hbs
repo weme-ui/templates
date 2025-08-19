@@ -1,5 +1,5 @@
 {
-  "name": "{{ owner }}-{{ name }}",
+  "name": "{{ name }}",
   "type": "module",
   "version": "{{ version }}",
   "private": true,
@@ -7,13 +7,13 @@
   "description": "Weme UI {{ titleCase name }} components registry.",
   "author": "{{{ author }}}",
   "license": "{{ license }}",
-  "homepage": "https://github.com/{{ owner }}/{{ name }}",
+  "homepage": "{{ homepage }}",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/{{ owner }}/{{ name }}.git"
+    "type": "{{ repository.type }}",
+    "url": "{{ repository.url }}"
   },
   "bugs": {
-    "url": "https://github.com/{{ owner }}/{{ name }}/issues"
+    "url": "{{ bugs.url }}"
   },
   "keywords": [
     "vue",

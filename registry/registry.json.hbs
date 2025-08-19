@@ -1,17 +1,18 @@
 {
-  "$schema": "../../schema/registry.json",
+  "$schema": "https://weme-ui.github.io/schema/registry.json",
   "name": "@{{ owner }}/{{ name }}",
   "description": "Weme UI for {{ titleCase name }} components registry.",
   "version": "{{ version }}",
   "prefix": "{{ name }}",
+  "directory": "registry/{{ name }}",
   "access": "public",
   "meta": {
     "authors": [
       "{{{ author }}}"
     ],
-    "homepage": "https://github.com/{{ owner }}/{{ name }}",
-    "repository": "https://github.com/{{ owner }}/{{ name }}.git",
-    "bugs": "https://github.com/{{ owner }}/{{ name }}/issues",
+    "homepage": "{{ homepage }}",
+    "repository": "{{ erase repository.url "git+" }}",
+    "bugs": "{{ bugs.url }}",
     "tags": [
       "@{{ owner }}/{{ name }}"
     ]

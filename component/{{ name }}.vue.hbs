@@ -3,7 +3,7 @@ import type { {{ pascalCase name }}Props } from './{{ kebabCase name }}.props'
 import { reactiveOmit } from '@vueuse/core'
 import { Primitive } from 'reka-ui'
 import { computed } from 'vue'
-import { cn } from '../../utils/styles'
+import { cn } from '~/utils/styles'
 import { use{{ pascalCase name }}Style } from './{{ kebabCase name }}.style'
 
 const props = defineProps<{{ pascalCase name }}Props>()
