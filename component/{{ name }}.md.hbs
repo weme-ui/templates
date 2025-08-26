@@ -1,8 +1,73 @@
 ---
 description: Weme UI {{ kebabCase registry }} component {{ titleCase name }}
-category: {{ lowerCase category }}
+
 links:
-  - label: Github
-    icon: i-simple-icons-github
-    href: https://github.com/{{ owner }}/{{ repo }}/tree/main/registry/{{ kebabCase registryName }}/components/{{ name }}/{{ name }}.vue
+  - label: {{ titleCase category }}
+    icon: lucide:component
+    to: /docs/{{ kebabCase registryName }}/components/{{ kebabCase category }}
+  - label: Source
+    icon: lucide:code
+    to: https://github.com/{{ owner }}/{{ repo }}/blob/main/registry/{{ kebabCase registryName }}/components/{{ name }}
+    target: _blank
 ---
+
+::preview
+#preview
+:Examples{{ titleCase registryName }}{{ titleCase name }}
+
+#code
+```vue inset
+<{{ pascalCase prefix }}{{ pascalCase name }} />
+```
+::
+
+## 特性
+
+::features
+---
+list:
+  - Weme UI {{ kebabCase registry }} component {{ titleCase name }}
+---
+::
+
+## 安装
+
+```shell [Terminal]
+$ pnpm dlx @weme-ui/weme-ui add {{ kebabCase registry }}/{{ name }}
+```
+
+## API
+
+### 属性
+
+::props-table
+---
+
+---
+::
+
+### 插槽
+
+::slots-table
+---
+
+---
+::
+
+### 事件
+
+::emits-table
+---
+
+---
+::
+
+### 样式
+
+::styles-table
+---
+
+---
+::
+
+## 示例
