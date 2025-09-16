@@ -1,13 +1,12 @@
 ---
-description: Weme UI {{ kebabCase registry.name }} component {{ titleCase name }}
+description: Weme UI {{ kebabCase registry }} component {{ titleCase name }}
 
 links:
   - label: {{ titleCase category }}
     icon: lucide:component
-    to: /docs/{{ erase registry.directory "registry/" }}/components/{{ kebabCase category }}
   - label: Source
     icon: lucide:code
-    to: {{ registry.meta.repository }}/tree/main/{{ registry.directory  }}/components/{{ kebabCase name }}
+    to: {{ meta.repository }}/tree/main/{{ meta.directory  }}/components/{{ kebabCase name }}
     target: _blank
 ---
 
@@ -28,7 +27,7 @@ list:
 ## 安装
 
 ```shell [Terminal]
-$ pnpm dlx @weme-ui/weme-ui add {{ kebabCase name }} --registry {{ kebabCase registry.name }}
+$ pnpm dlx @weme-ui/weme-ui add {{ kebabCase name }} --registry {{ meta.name }}
 ```
 
 ## API
