@@ -13,10 +13,7 @@ const ui = computed(() => use{{ pascalCase name }}Style(props))
 </script>
 
 <template>
-  <Primitive
-    v-bind="delegated"
-    :class="cn(ui, props.class)"
-  >
+  <Primitive v-bind="delegated" :class="ui.base({ class: cn(props.class, props.ui?.base) })">
     <slot />
   </Primitive>
 </template>
