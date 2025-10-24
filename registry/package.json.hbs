@@ -1,19 +1,19 @@
 {
-  "name": "{{ name }}",
+  "name": "@weme-ui/{{ name }}",
   "type": "module",
-  "version": "{{ version }}",
+  "version": "0.0.0",
   "private": true,
-  "packageManager": "{{ packageManager }}",
-  "description": "Weme UI {{ titleCase name }} components registry.",
-  "author": "{{{ author }}}",
-  "license": "{{ license }}",
-  "homepage": "{{ homepage }}",
+  "packageManager": "pnpm@10.19.0",
+  "description": "Weme UI {{ name }} components registry.",
+  "author": "Allen Luo <luoyi@mouji.net>",
+  "license": "MIT",
+  "homepage": "https://github.com/weme-ui/weme-ui",
   "repository": {
-    "type": "{{ repository.type }}",
-    "url": "{{ repository.url }}"
+    "type": "git",
+    "url": "git+https://github.com/weme-ui/weme-ui.git"
   },
   "bugs": {
-    "url": "{{ bugs.url }}"
+    "url": "https://github.com/weme-ui/weme-ui/issues"
   },
   "keywords": [
     "vue",
@@ -35,6 +35,8 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "peerDependencies": {
+    "@nuxt/icon": "catalog:dev",
+    "@nuxt/image": "catalog:dev",
     "@vueuse/core": "catalog:dev",
     "clsx": "catalog:dev",
     "nuxt": "catalog:nuxt",
@@ -46,6 +48,7 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "catalog:icon",
+    "@internationalized/date": "catalog:dev",
     "@nuxt/test-utils": "catalog:testing",
     "@vue/test-utils": "catalog:testing",
     "@vueuse/core": "catalog:dev",

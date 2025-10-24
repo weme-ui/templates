@@ -1,31 +1,49 @@
 {
   "$schema": "https://weme-ui.github.io/schema/registry.json",
-  "name": "@{{ owner }}/{{ name }}",
-  "description": "Weme UI for {{ titleCase name }} components registry.",
-  "version": "{{ version }}",
-  "prefix": "{{ name }}",
-  "directory": "registry/{{ name }}",
+  "name": "weme-ui/{{ kebabCase name }}",
+  "description": "The {{ name }} components for Weme UI.",
+  "version": "0.0.0",
+  "prefix": "ui",
+  "directory": "registry/{{ kebabCase name }}",
   "access": "public",
   "meta": {
     "authors": [
-      "{{{ author }}}"
+      "Allen Luo <luoyi@mouji.net>"
     ],
-    "homepage": "{{ homepage }}",
-    "repository": "{{ erase repository.url "git+" }}",
-    "bugs": "{{ bugs.url }}",
+    "homepage": "https://github.com/weme-ui/weme-ui",
+    "repository": "https://github.com/weme-ui/weme-ui",
+    "bugs": "https://github.com/weme-ui/weme-ui/issues",
     "tags": [
-      "@{{ owner }}/{{ name }}"
+      "weme-ui"
     ]
   },
-  "dependencies": [
-    "clsx",
-    "tailwind-merge",
-    "tailwind-variants"
-  ],
-  "devDependencies": [
-    "@weme-ui/nuxt",
-    "@weme-ui/unocss-preset"
-  ],
   "items": [
+    {
+      "name": "#init",
+      "type": "init",
+      "title": "Init",
+      "description": "Init dependencies and utils for Weme UI.",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "devDependencies": [
+        "@nuxt/icon",
+        "@internationalized/date",
+        "@unocss/nuxt",
+        "@vueuse/core",
+        "@weme-ui/nuxt",
+        "@weme-ui/unocss-preset",
+        "reka-ui",
+        "unocss",
+        "vue"
+      ],
+      "files": [
+        { "type": "util", "path": "utils/styles.ts" },
+        { "type": "util", "path": "utils/props.ts" },
+        { "type": "util", "path": "utils/slots.ts" }
+      ]
+    }
   ]
 }
