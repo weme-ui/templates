@@ -1,21 +1,18 @@
 {
   "$schema": "https://weme-ui.github.io/schema/registry.json",
-  "name": "weme-ui/{{ kebabCase name }}",
-  "description": "The {{ name }} components for Weme UI.",
-  "version": "0.0.0",
-  "prefix": "ui",
-  "directory": "registry/{{ kebabCase name }}",
-  "access": "public",
+  "name": "{{ name }}",
+  "description": "{{ description }}",
+  "version": "{{ version }}",
+  "prefix": "{{ prefix }}",
+  "directory": "{{ directory }}",
+  "access": "{{ access }}",
   "meta": {
     "authors": [
-      "Allen Luo <luoyi@mouji.net>"
+      "{{ author }}"
     ],
-    "homepage": "https://github.com/weme-ui/weme-ui",
-    "repository": "https://github.com/weme-ui/weme-ui",
-    "bugs": "https://github.com/weme-ui/weme-ui/issues",
-    "tags": [
-      "weme-ui"
-    ]
+    "homepage": "{{ homepage }}",
+    "repository": "{{ github }}",
+    "bugs": "{{ github }}/issues"
   },
   "items": [
     {
@@ -23,20 +20,17 @@
       "type": "init",
       "title": "Init",
       "description": "Init dependencies and utils for Weme UI.",
-      "dependencies": [
-        "clsx",
-        "tailwind-merge",
-        "tailwind-variants"
-      ],
       "devDependencies": [
-        "@nuxt/icon",
-        "@internationalized/date",
-        "@unocss/nuxt",
         "@vueuse/core",
         "@weme-ui/nuxt",
         "@weme-ui/unocss-preset",
+        "clsx",
+        "nuxt",
         "reka-ui",
+        "tailwind-merge",
+        "tailwind-variants"
         "unocss",
+        "vue-tsc",
         "vue"
       ],
       "files": [
