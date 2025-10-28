@@ -14,26 +14,6 @@
 
 ---
 
-## Getting Started
-
-### Initialize
-
-```bash
-pnpm dlx @weme-ui/weme-ui init <name> --template @weme-ui/templates
-```
-
-### Add Component
-
-```bash
-pnpm dlx @weme-ui/weme-ui add <registry/component> --template @weme-ui/templates
-```
-
-### Add Theme
-
-```bash
-pnpm dlx @weme-ui/weme-ui add <registry/theme> --type theme --template @weme-ui/templates
-```
-
 ---
 
 ## License
