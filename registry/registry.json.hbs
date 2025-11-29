@@ -4,39 +4,34 @@
   "description": "{{ description }}",
   "version": "{{ version }}",
   "prefix": "{{ prefix }}",
-  "access": "{{ access }}",
-  "meta": {
-    "authors": [
-      "{{{ author }}}"
-    ],
-    "homepage": "{{ homepage }}",
-    "repository": "{{ github }}",
-    "bugs": "{{ github }}/issues"
-  },
   "items": [
+    {{#if initItems}}
     {
       "name": "#init",
       "type": "init",
       "title": "Init",
       "description": "Init dependencies and utils for Weme UI.",
-      "devDependencies": [
+      "dependencies": [
         "@vueuse/core",
-        "@weme-ui/nuxt",
-        "@weme-ui/unocss-preset",
         "clsx",
-        "nuxt",
         "reka-ui",
         "tailwind-merge",
-        "tailwind-variants",
+        "tailwind-variants"
+      ],
+      "devDependencies": [
+        "@weme-ui/nuxt",
+        "@weme-ui/unocss-preset",
+        "nuxt",
         "unocss",
         "vue-tsc",
         "vue"
       ],
       "files": [
-        { "type": "util", "path": "utils/styles.ts" },
-        { "type": "util", "path": "utils/props.ts" },
-        { "type": "util", "path": "utils/slots.ts" }
+        { "type": "util", "path": "utils/styles.ts", "hash": "3975a0ea465ea931c4f5fd90af0e62b6" },
+        { "type": "util", "path": "utils/props.ts", "hash": "23177f90701087234a5c6a5d5d137758" },
+        { "type": "util", "path": "utils/slots.ts", "hash": "8ea3c19f1067925ad64d06accfc995ef" }
       ]
     }
+    {{/if}}
   ]
 }
